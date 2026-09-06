@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Rhetorical Gauntlet — Cinematic AP Language Review</title>
+<style>
+:root{--ink:#07080a;--paper:#efe2c2;--cream:#fff4da;--gold:#f0b72f;--gold2:#8f6320;--teal:#22d5db;--purple:#8d5ae0;--rose:#cf5f92;--red:#cf5768;--green:#55c995;--muted:#cfc7b9;--line:rgba(255,255,255,.14);--shadow:rgba(0,0,0,.65)}
+*{box-sizing:border-box}html,body{height:100%;margin:0;background:#030405;color:#fff;font-family:Inter,Segoe UI,Arial,sans-serif;overflow:hidden}
+button,input,textarea,select{font:inherit}button{cursor:pointer}.hidden{display:none!important}
+#app{height:100%;position:relative;overflow:hidden;background:#060708}
+.topbar{position:absolute;inset:0 0 auto;height:58px;z-index:80;display:flex;align-items:center;justify-content:space-between;padding:0 22px;background:linear-gradient(180deg,rgba(0,0,0,.92),rgba(0,0,0,.35));border-bottom:1px solid rgba(240,183,47,.22);backdrop-filter:blur(8px)}
+.brand{font-family:Impact,"Arial Black",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#f8e4a6}.brand span{color:var(--teal)}
+.top-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;align-items:center}.iconbtn{border:1px solid rgba(255,255,255,.16);background:rgba(0,0,0,.35);color:#fff;border-radius:9px;padding:8px 11px;font-weight:800;font-size:12px}.iconbtn:hover{background:rgba(255,255,255,.1)}
+.progress-shell{position:absolute;top:58px;left:0;right:0;height:5px;background:rgba(255,255,255,.06);z-index:82}.progressbar{height:100%;background:linear-gradient(90deg,var(--teal),var(--purple),var(--gold));width:0}
+.screen{display:none;position:absolute;inset:63px 0 0;overflow:auto;background:#040506}.screen.active{display:block}.screen::-webkit-scrollbar{width:9px}.screen::-webkit-scrollbar-thumb{background:#7a6545;border-radius:8px}
+.scene{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(.93) contrast(1.06) brightness(.7);transform:scale(1.05);animation:kenburns 18s ease-in-out infinite alternate;z-index:0}
+@keyframes kenburns{0%{transform:scale(1.04) translate3d(-1%,0,0)}100%{transform:scale(1.12) translate3d(1.5%,-1%,0)}}
+.scene::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 25%,transparent 0 23%,rgba(0,0,0,.25) 55%,rgba(0,0,0,.76) 100%),linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.56) 46%,rgba(0,0,0,.18) 100%)}
+.scene.home{background-image:url("assets/home_arena.png")}.scene.armory{background-image:url("assets/armory.png")}.scene.trials{background-image:url("assets/trials.png")}.scene.arena{background-image:url("assets/ap_arena.png")}.scene.final{background-image:url("assets/final_chamber.png")}
+.particles{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}.particle{position:absolute;border-radius:50%;background:#f4c75f;opacity:.28;animation:floatUp linear infinite}.particle.teal{background:#6bcacb}.particle.purple{background:#a685d4}@keyframes floatUp{from{transform:translateY(105vh) translateX(0) scale(.6)}to{transform:translateY(-12vh) translateX(60px) scale(1.2)}}
+.view{position:relative;z-index:4;min-height:100%;padding:32px 38px 88px;display:grid;grid-template-columns:minmax(380px,1.05fr) minmax(420px,.95fr);gap:28px;align-items:center}.view.full{grid-template-columns:1fr}.view.question-view{grid-template-columns:minmax(520px,1.1fr) minmax(360px,.9fr)}
+.cinematic-copy{max-width:850px}.eyebrow{font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);font-size:14px;margin-bottom:10px}
+h1,h2,h3{margin:.08em 0 .35em}h1{font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase;letter-spacing:-.025em;line-height:.9;font-size:clamp(48px,7vw,110px);text-shadow:0 8px 30px rgba(0,0,0,.55)}h2{font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase;font-size:clamp(32px,4vw,62px);line-height:.95}h3{font-size:20px}.teal{color:var(--teal)}.purple{color:#ab7dd5}.gold{color:var(--gold)}.rose{color:#e26f98}.dim{color:#bdb5a8}
+.lede{font-family:Georgia,serif;font-size:clamp(18px,1.6vw,25px);line-height:1.52;color:#f5ead5;max-width:760px}.punch{font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase;font-size:clamp(25px,3.2vw,48px);line-height:1.02;margin:16px 0}.micro{font-size:12px;color:#bcb3a4;line-height:1.45}
+.glass{background:linear-gradient(145deg,rgba(8,9,12,.87),rgba(22,17,13,.68));border:1px solid rgba(240,183,47,.22);border-radius:24px;padding:24px;box-shadow:0 30px 100px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.025);backdrop-filter:blur(7px)}
+.paper{background:linear-gradient(180deg,#f4e9cf,#e9d7b7);color:#17130d;border-radius:18px;padding:20px;border:1px solid #b99553;box-shadow:0 22px 60px rgba(0,0,0,.35);position:relative}.paper::before{content:"";position:absolute;inset:0;opacity:.12;pointer-events:none;background-image:repeating-linear-gradient(0deg,rgba(80,55,25,.2) 0 1px,transparent 1px 5px);border-radius:inherit}
+.action{border:0;border-radius:12px;padding:13px 18px;font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase;letter-spacing:.06em;background:linear-gradient(180deg,#f2c14b,#bb8228);color:#171005;box-shadow:0 12px 34px rgba(240,183,47,.2);transition:.18s}.action:hover{transform:translateY(-2px);filter:brightness(1.07)}.action.secondary{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.17);box-shadow:none}.action.tealbtn{background:linear-gradient(180deg,#54c9c9,#1f8d91);color:#041112}.action.purplebtn{background:linear-gradient(180deg,#b58ef3,#6f45b7);color:#12071d}.action.greenbtn{background:linear-gradient(180deg,#8ee1bb,#2a9d68);color:#04130d}
+.inputline,.fieldinput, textarea, select{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;padding:13px 14px;border-radius:10px;font-size:18px;outline:none} textarea{min-height:280px;line-height:1.6;resize:vertical}
+.inputline:focus,.fieldinput:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(240,183,47,.15)}
+select option{background:#101216;color:#fff}#period,#studentName,#startBtn{position:relative;z-index:8}#period{cursor:pointer}
+.scene-card{min-height:520px;position:relative;border-radius:28px;overflow:hidden;border:1px solid rgba(240,183,47,.24);box-shadow:0 36px 100px rgba(0,0,0,.48);background:#111}.scene-card img{width:100%;height:100%;min-height:520px;object-fit:cover;display:block;animation:cardPan 16s ease-in-out infinite alternate}.scene-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(0,0,0,.72) 100%)}@keyframes cardPan{from{transform:scale(1.01) translateX(-1%)}to{transform:scale(1.08) translateX(1.5%)}}
+.scene-label{position:absolute;left:18px;bottom:16px;z-index:2;background:rgba(0,0,0,.74);border-left:4px solid var(--gold);padding:10px 13px;border-radius:8px;max-width:86%}.scene-label b{display:block;color:var(--gold);font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase;letter-spacing:.07em;font-size:16px}.scene-label p{margin:6px 0 0;color:#e8dfd0;font-size:13px;line-height:1.4}
+.lesson-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}.lesson-chip{background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.12);padding:14px;border-radius:14px;min-height:104px}.lesson-chip b{display:block;color:#f4cb66;text-transform:uppercase;font-size:13px;letter-spacing:.06em;margin-bottom:5px}.lesson-chip span{font-size:14px;line-height:1.38;color:#e9e0d1}
+.chain{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:16px 0}.chain-node{padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-weight:900}.chain-arrow{color:var(--gold);font-size:24px}
+.question-card{background:linear-gradient(145deg,rgba(8,9,12,.93),rgba(20,17,15,.86));border:1px solid rgba(240,183,47,.23);border-radius:23px;padding:22px;box-shadow:0 28px 80px rgba(0,0,0,.48);backdrop-filter:blur(6px)}
+.qmeta{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;color:#bfb5a6;font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:900}.qstem{font-family:Georgia,serif;font-weight:700;font-size:clamp(19px,1.7vw,25px);line-height:1.42;color:#fff7e7;margin-bottom:14px}
+.passage{background:#f3e8d1;color:#17130e;border-radius:14px;padding:15px 16px;max-height:330px;overflow:auto;font:15px/1.55 Georgia,serif;margin:10px 0 15px;border:1px solid #b8975b}.passage h3{font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase;color:#6b3f13}.passage em{color:#4b351e}
+.choices{display:grid;gap:9px}.choice,.option{position:relative;text-align:left;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.055);color:#fff;border-radius:12px;padding:12px 13px;line-height:1.38;font-size:14px;font-weight:760;transition:.18s;display:grid;grid-template-columns:38px 1fr;gap:10px;align-items:start}.choice:hover,.option:hover{transform:translateX(3px);border-color:rgba(240,183,47,.62);background:rgba(240,183,47,.08)}.option.selected{border-color:#67d3ff;background:rgba(103,211,255,.1);box-shadow:0 0 0 2px rgba(103,211,255,.15)}.letter{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.09);font-weight:950}
+.feedback{min-height:54px;margin-top:12px;padding:11px 12px;border-radius:9px;background:rgba(0,0,0,.34);border-left:4px solid var(--gold);color:#dcd3c4;font-size:13px;line-height:1.45}.feedback strong{color:#fff}.feedback.correct{border-left-color:var(--green)}.feedback.wrong{border-left-color:var(--red)}.feedback:not(.show){display:none}
+.q-scene{min-height:540px;position:relative;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 90px rgba(0,0,0,.45)}.q-scene img{width:100%;height:100%;min-height:540px;object-fit:cover;animation:cardPan 15s ease-in-out infinite alternate}.q-scene::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.45))}
+.q-hud{position:absolute;z-index:3;left:14px;right:14px;bottom:14px;background:rgba(0,0,0,.72);border:1px solid rgba(240,183,47,.28);border-radius:12px;padding:12px}.q-hud b{color:var(--gold);font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase}.q-hud p{margin:5px 0 0;color:#e8dfd0;font-size:13px;line-height:1.4}
+.timer{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;border:7px solid currentColor;color:var(--teal);font-weight:1000;font-size:1.55rem;box-shadow:0 0 22px currentColor;background:rgba(0,0,0,.48)}.timer.warn{color:var(--gold)} .timer.danger{color:var(--red)}
+.progress{height:10px;background:#1a2230;border-radius:999px;overflow:hidden;margin-top:14px}.progress>div{height:100%;background:linear-gradient(90deg,var(--teal),var(--purple));width:0}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px} .btn{border:0;border-radius:12px;padding:13px 18px;font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase;letter-spacing:.06em;background:linear-gradient(180deg,#f2c14b,#bb8228);color:#171005;box-shadow:0 12px 34px rgba(240,183,47,.2);transition:.18s} .btn:hover{transform:translateY(-2px);filter:brightness(1.07)} .btn.secondary{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.17);box-shadow:none} .btn.cyan{background:linear-gradient(180deg,#54c9c9,#1f8d91);color:#041112} .btn.primary{background:linear-gradient(180deg,#f2c14b,#bb8228)} .btn.orange{background:linear-gradient(180deg,#ffca6e,#c27f1d);color:#231300} .btn.purple{background:linear-gradient(180deg,#b58ef3,#6f45b7);color:#12071d} .btn.green{background:linear-gradient(180deg,#8ee1bb,#2a9d68);color:#04130d}
+.brief-wrap{position:relative;z-index:4;min-height:100%;padding:32px 38px 88px;display:grid;grid-template-columns:minmax(420px,1fr) minmax(360px,.9fr);gap:28px;align-items:center}
+.brief-card p{font-family:Georgia,serif;font-size:1.13rem;line-height:1.65;color:#f5ead5} .brief-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0} .brief-cards div{padding:18px;border:1px solid var(--line);background:rgba(255,255,255,.05);border-radius:14px} .brief-cards strong{display:block;color:#f4cb66;text-transform:uppercase;font-size:.75rem;letter-spacing:.09em;margin-bottom:6px}
+.read-layout,.ap-layout,.write-layout,.question-layout,.home-grid,.runner-grid{position:relative;z-index:4;min-height:100%;padding:32px 38px 88px;display:grid;gap:28px;align-items:start}
+.home-grid{grid-template-columns:minmax(380px,1.05fr) minmax(420px,.95fr);align-items:center} .question-layout{grid-template-columns:minmax(560px,1.08fr) minmax(360px,.92fr)} .read-layout,.ap-layout,.write-layout{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)} .runner-grid{grid-template-columns:minmax(380px,.9fr) minmax(420px,1.1fr);align-items:center}
+.panel{background:linear-gradient(145deg,rgba(8,9,12,.87),rgba(22,17,13,.68));border:1px solid rgba(240,183,47,.22);border-radius:24px;padding:24px;box-shadow:0 30px 100px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.025);backdrop-filter:blur(7px)}
+.passage-card{padding:24px} .passage-scroll{background:#f3e8d1;color:#17130e;border-radius:14px;padding:16px 18px;max-height:62vh;overflow:auto;font:16px/1.68 Georgia,serif;border:1px solid #b8975b} .passage-scroll em{color:#4b351e} .passage-scroll p{margin:0 0 1em}
+.bigtime{font-family:Impact,"Arial Black",sans-serif;font-size:clamp(64px,10vw,118px);line-height:.85;color:var(--gold);margin:14px 0}.read-guide{display:grid;gap:12px;margin:18px 0}.read-guide div{padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.05)}.read-guide b{color:var(--gold)}
+.frame{padding:14px;border:1px solid rgba(85,201,149,.4);border-radius:12px;background:rgba(85,201,149,.08);line-height:1.5;margin:12px 0;color:#eaf7f0}.write-time{font-family:Impact,"Arial Black",sans-serif;font-size:58px;color:var(--green)}
+.selfcheck{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}.check{padding:12px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.05)}.check input{width:auto;margin-right:8px}
+.report-wrap{position:relative;z-index:4;min-height:100%;padding:32px 38px 88px;display:grid;place-items:center} .report-card{width:min(1200px,96vw)} .report-head{display:flex;justify-content:space-between;gap:24px;align-items:flex-start} .report-head h2{font-size:clamp(34px,5vw,74px)} .score{font-family:Impact,"Arial Black",sans-serif;font-size:clamp(56px,8vw,110px);line-height:.9;color:var(--teal)}
+.metrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:26px 0} .metric{padding:16px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.05)} .metric span{display:block;color:#d2c8b8;font-size:.73rem;text-transform:uppercase;letter-spacing:.09em;font-weight:900} .metric strong{font-size:1.8rem} .pace-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px} .pace-grid>div{padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.05)} .writing-box{margin-top:18px;padding:18px;border:1px solid rgba(85,201,149,.4);border-radius:14px;background:rgba(85,201,149,.06);white-space:pre-wrap;line-height:1.55}
+.smallnote{font-size:.88rem;color:#d1c8ba;line-height:1.5;margin-top:14px}
+.runner-stage{position:relative;height:520px;border-radius:22px;border:1px solid var(--line);overflow:hidden;background:linear-gradient(180deg,rgba(17,25,42,.4),rgba(5,6,9,.8));box-shadow:0 30px 100px rgba(0,0,0,.45)} .runner-stage::before{content:"";position:absolute;inset:0;background-image:url("assets/trials.png");background-size:cover;background-position:center;filter:brightness(.45) saturate(.9);animation:cardPan 14s ease-in-out infinite alternate} .runner-bg{position:absolute;inset:0;z-index:1;background:repeating-linear-gradient(90deg,transparent 0 130px,rgba(255,255,255,.03) 131px 132px)} .runner-ground{position:absolute;left:0;right:0;bottom:0;height:110px;background:linear-gradient(#111923,#040507);border-top:2px solid rgba(34,213,219,.25);z-index:1} .player{position:absolute;left:120px;bottom:110px;width:46px;height:76px;background:linear-gradient(#dce8f7,#586778);border-radius:18px 18px 8px 8px;transition:bottom .18s,left .1s;z-index:2} .player:before{content:"";position:absolute;top:-28px;left:8px;width:30px;height:30px;border-radius:50%;background:#ccd5df} .player.jump{bottom:230px} .player.slide{height:38px;border-radius:16px} .obstacle{position:absolute;bottom:110px;width:48px;height:56px;background:#3a4655;border:1px solid #75849a;border-radius:6px;z-index:2} .obstacle.low{height:28px;width:74px} .collect{position:absolute;bottom:230px;width:26px;height:26px;border-radius:50%;background:var(--gold);box-shadow:0 0 20px var(--gold);z-index:2} .runhud{position:absolute;left:18px;right:18px;top:16px;display:flex;justify-content:space-between;font-weight:950;z-index:3} .runmsg{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);font-size:2rem;font-weight:1000;color:var(--gold);text-shadow:0 0 18px #000;opacity:0;z-index:3} .runmsg.show{opacity:1}
+#cineStageArt,#briefArt,#readArt,#apArt,#writeArt{height:100%}
+@media(max-width:1100px){.home-grid,.brief-wrap,.question-layout,.read-layout,.ap-layout,.write-layout,.runner-grid{grid-template-columns:1fr}.scene-card img,.q-scene img{min-height:340px}.scene-card{min-height:340px}.metrics,.pace-grid,.brief-cards,.lesson-grid,.selfcheck{grid-template-columns:1fr}}
+@media(max-width:720px){html,body{overflow:auto}.screen{position:relative;inset:auto;min-height:100vh;padding-top:63px}.topbar{position:fixed;width:100%} .progress-shell{position:fixed} .read-layout,.ap-layout,.write-layout,.question-layout,.home-grid,.runner-grid,.brief-wrap{padding:24px 16px 80px} .timer{width:74px;height:74px;font-size:1.2rem} .report-head{display:block}}
+
+/* ---- CINEMATIC GAUNTLET BRAIN BREAKS ---- */
+.runner-stage{--runner-bg:none;isolation:isolate;background:#050608!important}
+.runner-stage::before{background-image:var(--runner-bg)!important;filter:brightness(.48) saturate(.95) contrast(1.08)!important;transform:scale(1.08);z-index:0}
+.runner-stage::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.18) 55%,rgba(0,0,0,.58)),radial-gradient(circle at 65% 28%,rgba(240,183,47,.12),transparent 28%)}
+.runner-stage.segment-1::after{background:linear-gradient(180deg,rgba(15,27,31,.05),rgba(3,5,7,.52)),radial-gradient(circle at 78% 22%,rgba(240,183,47,.2),transparent 25%)}
+.runner-stage.segment-2::after{background:linear-gradient(180deg,rgba(25,13,35,.04),rgba(5,3,8,.58)),radial-gradient(circle at 62% 30%,rgba(141,90,224,.18),transparent 28%)}
+.runner-stage.segment-3::after{background:linear-gradient(180deg,rgba(33,18,5,.03),rgba(5,3,2,.6)),radial-gradient(circle at 70% 23%,rgba(255,154,46,.2),transparent 26%)}
+.runner-bg{z-index:2!important;background:repeating-linear-gradient(90deg,transparent 0 160px,rgba(255,255,255,.025) 161px 162px)!important;animation:runnerScan 8s linear infinite}
+@keyframes runnerScan{to{transform:translateX(-160px)}}
+.runner-ground{z-index:3!important;height:105px!important;background:linear-gradient(180deg,rgba(23,24,27,.92),#050506)!important;box-shadow:inset 0 2px rgba(240,183,47,.3),0 -20px 55px rgba(0,0,0,.32)}
+.runner-ground::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 90px,rgba(255,255,255,.045) 91px 93px,transparent 94px 180px);opacity:.45;animation:groundMove 1.1s linear infinite}
+@keyframes groundMove{to{background-position:-180px 0}}
+.runner-hazard-glow{position:absolute;left:0;right:0;bottom:0;height:105px;z-index:2;pointer-events:none;box-shadow:0 -20px 90px rgba(240,183,47,.08) inset}
+.player{z-index:7!important;width:56px!important;height:105px!important;background:none!important;border-radius:0!important;filter:drop-shadow(0 8px 7px rgba(0,0,0,.75));transition:bottom .18s,left .1s,transform .18s!important}
+.player:before{content:""!important;position:absolute!important;top:3px!important;left:18px!important;width:27px!important;height:27px!important;border-radius:50%!important;background:linear-gradient(145deg,#d6c3ad,#8d7564)!important;border:2px solid rgba(255,255,255,.18)!important;box-shadow:0 0 0 4px rgba(9,10,12,.55)!important}
+.player:after{content:"";position:absolute;left:16px;top:30px;width:31px;height:47px;border-radius:13px 13px 8px 8px;background:linear-gradient(160deg,#28313b,#10151b 75%);border:1px solid rgba(255,255,255,.12)}
+.player .arm,.player .leg{position:absolute;background:linear-gradient(#303a45,#11171d);border-radius:10px;transform-origin:top center;z-index:8}
+.player .arm{width:10px;height:43px;top:34px}.player .arm.a1{left:11px;animation:armRun .52s ease-in-out infinite alternate}.player .arm.a2{right:5px;animation:armRun .52s ease-in-out infinite alternate-reverse}
+.player .leg{width:12px;height:48px;top:70px}.player .leg.l1{left:17px;animation:legRun .48s ease-in-out infinite alternate}.player .leg.l2{left:33px;animation:legRun .48s ease-in-out infinite alternate-reverse}
+@keyframes armRun{from{transform:rotate(32deg)}to{transform:rotate(-34deg)}}@keyframes legRun{from{transform:rotate(27deg)}to{transform:rotate(-30deg)}}
+.player.jump{bottom:225px!important;transform:rotate(-4deg) scale(.96)}.player.jump .arm{animation-duration:.3s}.player.slide{height:52px!important;transform:rotate(72deg) translateY(11px);transform-origin:50% 85%}.player.slide:before{top:7px!important;left:12px!important}.player.slide:after{top:31px;height:30px}.player.slide .arm,.player.slide .leg{animation:none!important}
+.obstacle{z-index:6!important;border:none!important;box-shadow:0 9px 22px rgba(0,0,0,.65),inset 0 0 0 1px rgba(255,255,255,.12)!important}
+.obstacle.jump-obstacle{bottom:105px!important;width:58px!important;height:72px!important;border-radius:7px 7px 3px 3px!important;background:linear-gradient(145deg,#574a3c,#18191c 62%,#08090a)!important}
+.segment-1 .obstacle.jump-obstacle{background:linear-gradient(145deg,#7c6339,#332511 60%,#100c07)!important}.segment-1 .obstacle.jump-obstacle:after{content:"";position:absolute;inset:8px;border:2px solid #c7983e;border-radius:3px;opacity:.55}
+.segment-2 .obstacle.jump-obstacle{width:72px!important;height:53px!important;background:linear-gradient(145deg,#3b3648,#15121b)!important;clip-path:polygon(0 44%,22% 20%,37% 40%,55% 4%,72% 37%,100% 22%,100% 100%,0 100%)}
+.segment-3 .obstacle.jump-obstacle{background:linear-gradient(145deg,#5b4531,#1d1711)!important;width:66px!important;height:78px!important}.segment-3 .obstacle.jump-obstacle:before{content:"✦";position:absolute;inset:0;display:grid;place-items:center;color:#d7a94c;font-size:24px}
+.obstacle.slide-obstacle{bottom:180px!important;width:96px!important;height:24px!important;border-radius:4px!important;background:linear-gradient(180deg,#73777b,#25282c)!important;box-shadow:0 5px 20px rgba(0,0,0,.75),0 0 20px rgba(255,255,255,.08)!important}
+.obstacle.slide-obstacle:before,.obstacle.slide-obstacle:after{content:"";position:absolute;top:-55px;width:7px;height:58px;background:#2e3136}.obstacle.slide-obstacle:before{left:10px}.obstacle.slide-obstacle:after{right:10px}
+.segment-1 .obstacle.slide-obstacle{background:linear-gradient(180deg,#a17a2d,#3b2b10)!important;transform-origin:center;animation:swingBar 1.35s ease-in-out infinite alternate}.segment-1 .obstacle.slide-obstacle:after{content:"◆";top:-2px;right:39px;background:none;color:#f0b72f;font-size:18px;height:auto;width:auto}
+@keyframes swingBar{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+.segment-2 .obstacle.slide-obstacle{background:linear-gradient(180deg,#595367,#25212f)!important}.segment-3 .obstacle.slide-obstacle{background:linear-gradient(180deg,#8c6632,#37230f)!important}
+.collect{z-index:8!important;width:34px!important;height:34px!important;border-radius:7px!important;transform:rotate(45deg);background:radial-gradient(circle at 35% 30%,#fff1a6,#f0b72f 38%,#8f6320 80%)!important;border:2px solid rgba(255,244,190,.65);box-shadow:0 0 22px rgba(240,183,47,.85),0 8px 18px rgba(0,0,0,.55)!important}
+.collect:after{content:"✦";position:absolute;inset:0;display:grid;place-items:center;transform:rotate(-45deg);color:#31200a;font-size:17px;font-weight:900}
+.runhud{z-index:12!important;background:rgba(0,0,0,.5);border:1px solid rgba(240,183,47,.2);border-radius:10px;padding:9px 11px;backdrop-filter:blur(5px)}
+.runmsg{z-index:14!important;background:rgba(0,0,0,.5);padding:10px 18px;border-radius:12px;border:1px solid rgba(240,183,47,.25)}
+.runner-info h2{margin-bottom:8px}.runner-ready{margin:14px 0 16px;padding:13px 15px;border:1px solid rgba(240,183,47,.42);background:linear-gradient(90deg,rgba(240,183,47,.13),rgba(141,90,224,.10));border-radius:13px;font-weight:850;line-height:1.45;color:#fff2cf}.runner-ready b{color:var(--gold);font-family:Impact,"Arial Black",sans-serif;letter-spacing:.06em;text-transform:uppercase}.runner-story{font-family:Georgia,serif;color:#f0e5d1;font-size:1.05rem;line-height:1.55}.runner-goal{padding:12px 14px;border-left:4px solid var(--gold);background:rgba(240,183,47,.08);border-radius:8px;color:#f3eadb;line-height:1.45;margin:14px 0}.runner-scene-tag{display:inline-block;padding:6px 9px;border:1px solid rgba(255,255,255,.16);background:rgba(0,0,0,.36);border-radius:999px;color:#e9dfcf;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+
+
+.runner-difficulty{display:inline-block;margin:10px 0 2px;padding:7px 12px;border:1px solid rgba(240,183,47,.48);border-radius:999px;background:rgba(0,0,0,.55);color:#ffe083;font-family:Impact,"Arial Black",sans-serif;letter-spacing:.09em;text-transform:uppercase}
+</style>
+<link rel="preload" as="image" href="assets/home_arena.png">
+<link rel="preload" as="image" href="assets/armory.png">
+<link rel="preload" as="image" href="assets/trials.png">
+<link rel="preload" as="image" href="assets/ap_arena.png">
+<link rel="preload" as="image" href="assets/final_chamber.png">
+</head>
+<body>
+<div id="app">
+<div class="topbar"><div class="brand">THE RHETORICAL <span>GAUNTLET</span></div><div class="top-actions"><button class="iconbtn" onclick="document.getElementById('reportScreen').classList.contains('active')?window.print():0">Print</button><button class="iconbtn" onclick="location.reload()">Reset</button></div></div>
+<div class="progress-shell"><div id="globalProgress" class="progressbar"></div></div>
+<div style="display:none">
+  <div id="briefHud"></div><div id="questionHud"></div><div id="runnerHud"></div><div id="readHud"></div><div id="apHud"></div><div id="writeHud"></div><div id="mentorHud"></div>
+</div>
+
+<section id="home" class="screen active">
+  <div class="scene home"></div>
+  <div class="particles"></div>
+  <div class="home-grid">
+    <div class="glass cinematic-copy">
+      <div class="eyebrow">AP Language & Composition • Cinematic Adventure</div>
+      <h1>The Rhetorical <span class="teal">Gauntlet</span></h1>
+      <p class="lede">A sealed arena has reopened, and the only way through is to read the clues hidden inside language. Move through three cinematic chambers, survive the timed trials, and reach the final vault with your name on the accuracy report.</p>
+      <div class="punch"><span class="teal">Enter the mystery.</span><br><span class="purple">Read the pressure.</span><br><span class="gold">Claim the final vault.</span></div>
+      <div class="lesson-grid">
+        <div class="lesson-chip"><b>Chamber 1 — The Armory</b><span>Recover the key terms before the first gate seals shut.</span></div>
+        <div class="lesson-chip"><b>Chamber 2 — The Trials</b><span>Decode short scenes and hidden clues inside real language.</span></div>
+        <div class="lesson-chip"><b>Chamber 3 — The Arena</b><span>Face two full AP-style passages while the clock keeps moving.</span></div>
+        <div class="lesson-chip"><b>Final Chamber</b><span>Unlock the last door by writing one timed introduction with the passage in view.</span></div>
+      </div>
+      <div class="chain"><span class="chain-node">Clues</span><span class="chain-arrow">→</span><span class="chain-node">Motive</span><span class="chain-arrow">→</span><span class="chain-node">Mood</span><span class="chain-arrow">→</span><span class="chain-node">Word Choice</span><span class="chain-arrow">→</span><span class="chain-node">Final Vault</span></div>
+      <label class="eyebrow" for="studentName">Expedition Check-In</label>
+      <input id="studentName" class="inputline" placeholder="Enter your first and last name" />
+      <div style="height:10px"></div>
+      <select id="period" class="fieldinput"><option value="">Choose class period</option><option>1st Period</option><option>2nd Period</option><option>3rd Period</option><option>4th Period</option><option>5th Period</option><option>6th Period</option><option>7th Period</option><option>8th Period</option></select>
+      <div class="actions"><button id="startBtn" class="action" type="button">Enter the Arena</button></div>
+      <div id="homeError" class="smallnote" style="color:#ffb2bf;min-height:24px"></div>
+      <div class="smallnote">First responses count for academic accuracy. Students can retry for learning, but retries do not change the first-attempt score.</div>
+    </div>
+    <div class="scene-card"><img src="assets/home_arena.png" alt="Rhetorical Gauntlet cinematic arena"><div class="scene-label"><b>THE GATE IS OPEN</b><p>Step into the story, survive the chambers, and leave with a final named accuracy report.</p></div></div>
+  </div>
+</section>
+
+<section id="briefScreen" class="screen">
+  <div id="briefScene" class="scene armory"></div>
+  <div class="particles"></div>
+  <div class="brief-wrap">
+    <div class="glass brief-card">
+      <div class="eyebrow" id="briefEyebrow">Stage 1</div>
+      <h2 id="briefTitle">The Armory</h2>
+      <p id="briefText"></p>
+      <div id="briefCards" class="brief-cards"></div>
+      <div class="actions"><button id="briefGo" class="action tealbtn">Begin</button></div>
+    </div>
+    <div id="briefArt" class="scene-card"></div>
+  </div>
+</section>
+
+<section id="questionScreen" class="screen">
+  <div id="questionScene" class="scene armory"></div>
+  <div class="particles"></div>
+  <div class="question-layout question-view">
+    <div class="question-card">
+      <div class="qmeta"><span id="qStage">Stage</span><span id="qCount">Question</span><span id="timer" class="timer">0:15</span></div>
+      <div id="question" class="qstem"></div>
+      <div id="microtext" class="passage" style="display:none"></div>
+      <div id="options" class="choices"></div>
+      <div id="feedback" class="feedback"></div>
+      <div class="actions"><button id="submitBtn" class="btn cyan" disabled>Lock Response</button><button id="retryBtn" class="btn secondary" style="display:none">Try Again</button><button id="nextBtn" class="btn primary" style="display:none">Continue</button></div>
+      <div class="progress"><div id="qProgress"></div></div>
+    </div>
+    <div class="q-scene"><div id="cineStageArt"></div><div id="cineTitle" class="q-hud"></div></div>
+  </div>
+</section>
+
+<section id="runnerScreen" class="screen">
+  <div class="scene trials"></div>
+  <div class="particles"></div>
+  <div class="runner-grid">
+    <div class="glass runner-info"><div class="eyebrow">Non-Academic Gauntlet Break</div><div id="runnerSceneTag" class="runner-scene-tag">Chamber Escape</div><h2 id="runnerTitle">Run the Course</h2><p id="runnerStory" class="runner-story"></p><div class="runner-ready"><b>Read before you run:</b> Nothing moves and the 45-second clock does not begin until you click <b>RUN NOW</b>. Your goal is to survive the course and capture all 3 treasures.</div><div class="lesson-grid"><div class="lesson-chip"><b>Jump</b><span><span class="gold">Space</span> or <span class="gold">↑</span> to clear floor hazards.</span></div><div class="lesson-chip"><b>Slide</b><span>Press <span class="gold">↓</span> to duck under overhead barriers.</span></div><div class="lesson-chip"><b>Shift</b><span>Use <span class="gold">←</span> and <span class="gold">→</span> to move your runner.</span></div><div class="lesson-chip"><b>Survive 45 Seconds</b><span>Three hits ends the run, but never changes your academic score.</span></div></div><div id="runnerGoal" class="runner-goal"></div><div id="runnerDifficulty" class="runner-difficulty"></div><div class="actions"><button id="runNow" class="action purplebtn">RUN NOW</button><button id="skipRun" class="action secondary" style="display:none">Skip</button></div></div>
+    <div id="runnerStage" class="runner-stage segment-1"><div class="runner-bg"></div><div class="runner-hazard-glow"></div><div class="runner-ground"></div><div class="runhud"><span id="runLives">Lives ♥♥♥</span><span id="runTime">45s</span><span id="runTokens">Treasures 0/3</span></div><div id="player" class="player"><span class="arm a1"></span><span class="arm a2"></span><span class="leg l1"></span><span class="leg l2"></span></div><div id="runmsg" class="runmsg"></div></div>
+  </div>
+</section>
+
+<section id="readScreen" class="screen">
+  <div class="scene arena"></div>
+  <div class="particles"></div>
+  <div class="read-layout">
+    <div class="panel passage-card"><div class="eyebrow" id="readPassLabel">Passage</div><h2 id="readTitle"></h2><div id="readPassage" class="passage-scroll"></div></div>
+    <div class="glass"><div id="readArt" class="scene-card" style="min-height:300px;margin-bottom:16px"></div><div class="eyebrow">Reading Period</div><div id="readTimer" class="bigtime">2:00</div><p class="lede" style="font-size:1rem">Read for rhetorical situation and choices. The passage will remain visible during every question.</p><div class="read-guide"><div><b>WHO?</b> Intended audience</div><div><b>WHY NOW?</b> Exigence</div><div><b>WHAT FOR?</b> Precise author's purpose</div><div><b>ATTITUDE?</b> Tone or tone shift</div><div><b>HOW?</b> Diction and rhetorical effect</div></div><div class="actions"><button id="skipRead" class="action">Start the Questions</button></div></div>
+  </div>
+</section>
+
+<section id="apScreen" class="screen">
+  <div class="scene arena"></div>
+  <div class="particles"></div>
+  <div class="ap-layout">
+    <div class="panel passage-card"><div class="eyebrow" id="apPassLabel"></div><h2 id="apTitle"></h2><div id="apPassage" class="passage-scroll"></div></div>
+    <div class="question-card"><div id="apArt" class="scene-card" style="min-height:260px;margin-bottom:16px"></div><div class="qmeta"><span id="apSkill"></span><span id="apCount"></span><span id="apTimer" class="timer">1:00</span></div><div id="apQuestion" class="qstem"></div><div id="apOptions" class="choices"></div><div id="apFeedback" class="feedback"></div><div class="progress"><div id="apProgress"></div></div><div class="actions"><button id="apSubmit" class="btn orange" disabled>Lock Response</button><button id="apRetry" class="btn secondary" style="display:none">Try Again</button><button id="apNext" class="btn primary" style="display:none">Continue</button></div></div>
+  </div>
+</section>
+
+<section id="writeScreen" class="screen">
+  <div class="scene final"></div>
+  <div class="particles"></div>
+  <div class="write-layout">
+    <div class="panel passage-card"><div class="eyebrow" style="color:var(--green)">Final Passage — Always Visible</div><h2 id="writeTitle"></h2><div id="writePassage" class="passage-scroll"></div></div>
+    <div class="question-card"><div id="writeArt" class="scene-card" style="min-height:240px;margin-bottom:16px"></div><div class="qmeta"><span class="eyebrow" style="margin:0;color:var(--green)">Final Challenge</span><span id="writeTimer" class="write-time">6:00</span></div><div class="frame"><b>Sentence 1:</b> TAG + intended audience + exigence<br><b>Sentence 2:</b> precise author's purpose</div><textarea id="introText" placeholder="Write your rhetorical-analysis introduction here..."></textarea><div class="selfcheck"><label class="check"><input id="checkAudience" type="checkbox"> I named the intended audience.</label><label class="check"><input id="checkExigence" type="checkbox"> I identified the exigence.</label><label class="check"><input id="checkPurpose" type="checkbox"> I stated a precise author's purpose.</label></div><div class="actions"><button id="submitIntro" class="btn green">Submit Introduction</button></div><div id="writeMsg" class="smallnote"></div></div>
+  </div>
+</section>
+
+<section id="mentorScreen" class="screen">
+  <div class="scene final"></div>
+  <div class="particles"></div>
+  <div class="brief-wrap">
+    <div class="glass brief-card"><div class="eyebrow" style="color:var(--green)">Compare After Writing</div><h2 style="font-size:3rem">Mentor Introduction</h2><div id="mentorIntro" class="paper" style="font:18px/1.65 Georgia,serif"></div><p class="lede" style="font-size:1rem;margin-top:18px">Notice how the introduction identifies the rhetorical situation precisely and then states a specific purpose instead of relying on vague verbs like <em>persuade</em> or <em>inform</em>.</p><div class="actions"><button id="toReport" class="action greenbtn">View Final Report</button></div></div>
+    <div class="scene-card"><img src="assets/final_chamber.png" alt="Final chamber scene"><div class="scene-label"><b>COMPARE AND REFLECT</b><p>Students can compare their introduction to a mentor model before viewing the final performance report.</p></div></div>
+  </div>
+</section>
+
+<section id="reportScreen" class="screen">
+  <div class="scene final"></div>
+  <div class="particles"></div>
+  <div class="report-wrap"><div class="panel report-card"><div class="report-head"><div><div class="eyebrow" style="color:var(--green)">Gauntlet Complete</div><h2>Final Performance Report</h2><div id="reportName" class="lede" style="font-size:1rem"></div></div><div><div id="reportScore" class="score">0%</div><div class="dim">First-Attempt Accuracy</div></div></div><div id="metrics" class="metrics"></div><h3>Pace</h3><div id="paceGrid" class="pace-grid"></div><h3 style="margin-top:22px">Final Introduction</h3><div id="reportWriting" class="writing-box"></div><div class="smallnote">Academic accuracy reflects first responses only. Revised answers and pacing data do not change the first-attempt score.</div><div class="actions"><button id="printBtn" class="action secondary">Print / Save Report</button><button id="downloadBtn" class="action tealbtn">Download Report</button><button id="restartBtn" class="action">Restart Game</button></div></div></div>
+</section>
+</div>
+<script>
+
+const STORAGE="rhetorical_gauntlet_v1";
+const PURPOSE_WORDS=["Educate","Inspire","Encourage","Convince","Prove","Demonstrate","Describe","Emphasize","Inform","Motivate","Suggest","Persuade","Disprove","Reveal","Console","Admire","Explain","Express","Discuss","Judge","Criticize","Examine","Highlight","Contrast","Evaluate","Enlighten","Illustrate","Resist","Ridicule","Interpret","Question","Relate"];
+const TONE_WORDS=["optimistic","reflective","calm","hopeful","confident","playful","bold","inspired","excited","suspicious","anxious","skeptical","irritated","worried","discouraged","serious","hesitant","tired","pessimistic","intense","amused","enthusiastic","curious","sarcastic","proud","cautious","respectful","friendly","grateful","defiant","frustrated","disappointed","overwhelmed","relieved","nostalgic","apathetic","outraged","reverent","uneasy","patient","bored","reluctant","urgent","annoyed","indifferent","melancholic","thoughtful","apologetic","content","astonished","satirical","sardonic","solemn","apprehensive","indignant","wistful","elegiac","resigned","measured","conciliatory","resolute","inspirational"];
+const DICTION_TERMS=["loaded diction","dysphemism","technical diction / jargon","colloquial diction","formal diction","inclusive diction","exclusive diction","sensory diction","pejorative diction","laudatory diction"];
+
+const stage1=[
+{skill:"Purpose",stem:"A writer comforts a community after a devastating loss, helping readers feel less alone without asking them to take action. Which purpose verb is most precise?",opts:["Console","Encourage","Motivate","Inspire"],correct:0,why:"Console most precisely means offering comfort in response to grief or distress."},
+{skill:"Purpose",stem:"A writer brings an overlooked pattern to the audience's attention so they can see something they had not noticed before. Which purpose verb is most precise?",opts:["Reveal","Explain","Discuss","Illustrate"],correct:0,why:"Reveal most precisely captures making a previously hidden or unnoticed pattern visible."},
+{skill:"Purpose",stem:"A writer studies several sides of an issue closely before drawing a conclusion. Which purpose verb is most precise?",opts:["Examine","Evaluate","Interpret","Discuss"],correct:0,why:"Examine focuses on close investigation; evaluate goes a step further by judging quality or effectiveness."},
+{skill:"Purpose",stem:"A writer points out serious flaws in a policy and challenges the reasoning behind it. Which purpose verb is most precise?",opts:["Criticize","Question","Judge","Resist"],correct:0,why:"Criticize most directly means identifying faults or weaknesses in a subject."},
+{skill:"Purpose",stem:"A writer weighs the strengths and weaknesses of a program and decides whether it has been effective. Which purpose verb is most precise?",opts:["Evaluate","Examine","Discuss","Contrast"],correct:0,why:"Evaluate requires making a judgment after considering evidence or criteria."},
+{skill:"Purpose",stem:"A writer presents evidence showing that a popular claim is false. Which purpose verb is most precise?",opts:["Disprove","Question","Evaluate","Prove"],correct:0,why:"Disprove means demonstrating that a claim or belief is false."},
+{skill:"Purpose",stem:"A writer tells stories of ordinary people overcoming enormous obstacles so readers feel uplifted and believe change is possible. Which purpose verb is most precise?",opts:["Inspire","Encourage","Motivate","Admire"],correct:0,why:"Inspire most precisely describes awakening hope, admiration, or possibility in an audience."},
+{skill:"Purpose",stem:"A writer reassures hesitant students that they are capable of attempting a difficult challenge and urges them not to give up. Which purpose verb is most precise?",opts:["Encourage","Motivate","Console","Persuade"],correct:0,why:"Encourage builds confidence and support so an audience is more willing to continue or attempt something difficult."},
+{skill:"Purpose",stem:"A writer draws special attention to one overlooked consequence of a new law without judging the entire law. Which purpose verb is most precise?",opts:["Highlight","Evaluate","Criticize","Explain"],correct:0,why:"Highlight means deliberately drawing attention to a specific feature or idea."},
+{skill:"Purpose",stem:"A writer places two leadership styles side by side to make their differences unmistakable. Which purpose verb is most precise?",opts:["Contrast","Examine","Interpret","Discuss"],correct:0,why:"Contrast most precisely means emphasizing differences between two subjects."},
+
+{skill:"Tone",stem:"Which tone word most precisely describes controlled, even-handed language that avoids emotional extremes?",opts:["measured","apathetic","solemn","cautious"],correct:0,why:"Measured describes controlled, deliberate language that remains restrained rather than emotionally extreme."},
+{skill:"Tone",stem:"Which tone word most precisely describes respectful language designed to reduce disagreement and rebuild common ground?",opts:["conciliatory","measured","respectful","resigned"],correct:0,why:"Conciliatory specifically describes an effort to reduce conflict and restore agreement."},
+{skill:"Tone",stem:"Which tone word most precisely describes firm determination despite difficulty or opposition?",opts:["resolute","defiant","confident","intense"],correct:0,why:"Resolute emphasizes unwavering determination to continue despite obstacles."},
+{skill:"Tone",stem:"Which tone word most precisely describes anger caused by a perceived injustice or offense?",opts:["indignant","outraged","irritated","sardonic"],correct:0,why:"Indignant specifically conveys anger or offense in response to perceived unfairness or wrongdoing."},
+{skill:"Tone",stem:"Which tone word most precisely describes uneasiness about what may happen in the future?",opts:["apprehensive","cautious","skeptical","hesitant"],correct:0,why:"Apprehensive expresses anxious concern about a possible future outcome."},
+{skill:"Tone",stem:"Which tone word most precisely describes bitter, cutting mockery intended to expose foolishness or hypocrisy?",opts:["sardonic","satirical","sarcastic","indignant"],correct:0,why:"Sardonic describes grim or bitterly mocking language; satire is broader and often targets social folly through sustained ridicule."},
+{skill:"Tone",stem:"Which tone word most precisely describes serious, dignified language appropriate to a grave occasion?",opts:["solemn","reverent","measured","melancholic"],correct:0,why:"Solemn describes serious, formal gravity, especially in response to an important or weighty occasion."},
+{skill:"Tone",stem:"Which tone word most precisely describes fond reflection on a meaningful time in the past?",opts:["nostalgic","wistful","reflective","grateful"],correct:0,why:"Nostalgic centers on affectionate remembrance of the past."},
+{skill:"Tone",stem:"Which tone word most precisely describes a sad longing for something distant, lost, or unattainable?",opts:["wistful","nostalgic","melancholic","resigned"],correct:0,why:"Wistful combines longing with sadness, especially for something absent or unreachable."},
+{skill:"Tone",stem:"Which tone word most precisely describes accepting an unwanted outcome because the speaker believes it cannot be changed?",opts:["resigned","apathetic","discouraged","patient"],correct:0,why:"Resigned means accepting an undesirable situation as unavoidable rather than simply lacking interest or hope."},
+
+{skill:"Diction",stem:"A speaker calls volunteers “steadfast,” “generous,” and “courageous.” Which diction term most precisely describes the word choice?",opts:["laudatory diction","loaded diction","formal diction","inclusive diction"],correct:0,why:"Laudatory diction uses words of praise or admiration to elevate its subject."},
+{skill:"Diction",stem:"A writer describes an opponent's proposal as “reckless,” “shallow,” and “self-serving.” Which diction term most precisely describes the word choice?",opts:["pejorative diction","loaded diction","exclusive diction","dysphemism"],correct:0,why:"Pejorative diction uses negative or contemptuous words to diminish a person, group, or idea."},
+{skill:"Diction",stem:"A medical article refers to “myocardial infarction,” “ischemia,” and “ventricular fibrillation.” Which diction term most precisely describes the vocabulary?",opts:["technical diction / jargon","formal diction","exclusive diction","loaded diction"],correct:0,why:"Technical diction or jargon consists of specialized vocabulary associated with a profession or field."},
+{skill:"Diction",stem:"A speaker says, “Y'all know how this goes—we've been here before, and we're gonna figure it out.” Which diction term most precisely describes the word choice?",opts:["colloquial diction","inclusive diction","informal loaded diction","sensory diction"],correct:0,why:"Colloquial diction uses conversational, everyday language associated with ordinary speech."},
+{skill:"Diction",stem:"A legal notice uses words such as “hereby,” “pursuant,” and “shall be required.” Which diction term most precisely describes the word choice?",opts:["formal diction","technical diction / jargon","exclusive diction","laudatory diction"],correct:0,why:"Formal diction uses elevated, conventional language suited to official or serious contexts."},
+{skill:"Diction",stem:"A speaker repeats “we,” “our,” and “together” while describing a shared challenge. Which diction term most precisely describes this choice?",opts:["inclusive diction","loaded diction","colloquial diction","laudatory diction"],correct:0,why:"Inclusive diction deliberately places speaker and audience within a shared group or identity."},
+{skill:"Diction",stem:"A speaker repeatedly refers to “those people,” “their problem,” and “outsiders like them.” Which diction term most precisely describes this choice?",opts:["exclusive diction","pejorative diction","formal diction","dysphemism"],correct:0,why:"Exclusive diction creates separation between an in-group and an out-group through distancing language."},
+{skill:"Diction",stem:"A writer describes “the acrid smoke scratching the throat” and “black water slick against the reeds.” Which diction term most precisely describes the word choice?",opts:["sensory diction","loaded diction","technical diction / jargon","pejorative diction"],correct:0,why:"Sensory diction appeals directly to sight, smell, touch, taste, or sound to make an experience vivid."},
+{skill:"Diction",stem:"A campaign calls a proposed tax a “community investment,” while opponents call it a “government money grab.” Which diction term most precisely describes both phrases?",opts:["loaded diction","pejorative diction","formal diction","exclusive diction"],correct:0,why:"Loaded diction uses emotionally charged wording designed to shape the audience's reaction to the subject."},
+{skill:"Diction",stem:"A columnist calls a luxury development a “concrete parasite” instead of simply calling it a building. Which diction term most precisely describes that substitution?",opts:["dysphemism","pejorative diction","loaded diction","sensory diction"],correct:0,why:"A dysphemism deliberately replaces a neutral term with a harsher or more offensive expression."}
+];
+
+const stage2=[
+{skill:"Tone Shift",text:"“We asked politely. We submitted the forms. We attended every meeting. Tonight, we are no longer asking whether the bridge will be repaired. We are asking when.”",stem:"Which description best captures the shift in tone?",opts:["patient to resolute","reflective to nostalgic","skeptical to indifferent","anxious to relieved"],correct:0,why:"The speaker moves from patient procedural restraint to firm determination."},
+{skill:"Diction",text:"“These volunteers have been persistent, generous, and steadfast even when the work attracted little attention.”",stem:"Which choice best identifies the diction and its rhetorical purpose?",opts:["laudatory diction that elevates the volunteers' commitment to encourage continued participation","inclusive diction that merges the volunteers with the audience to minimize disagreement about the project","formal diction that creates professional distance to strengthen the speaker's institutional credibility","loaded diction that heightens emotional pressure to make opposition to the project appear irresponsible"],correct:0,why:"The praising adjectives are laudatory and frame continued commitment as admirable."},
+{skill:"Purpose",text:"“The proposal is not reckless, but neither is it complete. Before we approve it, we should ask what happens to families whose rents rise faster than their wages.”",stem:"Which purpose verb most precisely describes the speaker's aim?",opts:["Question whether the proposal accounts for an important consequence","Condemn the proposal as fundamentally unjust to working families","Explain how rent increases are calculated under the proposal","Motivate residents to reject the proposal before further debate"],correct:0,why:"The speaker raises a specific unresolved concern rather than outright condemning or rejecting the proposal."},
+{skill:"Audience",text:"“You know what it is like to decide whether a patient's silence means comfort, fear, or confusion. That judgment cannot be automated by a checklist.”",stem:"Which audience is most directly implied by the speaker's language?",opts:["health-care professionals who make bedside judgments","patients evaluating whether to trust hospital technology","administrators comparing hospital staffing models","software developers designing medical data systems"],correct:0,why:"The second-person reference to interpreting patient behavior assumes firsthand clinical experience."},
+{skill:"Exigence",text:"“Beginning next month, the district plans to replace all paper emergency maps with a phone application. During last spring's tornado warning, however, the cellular network failed for nearly twenty minutes.”",stem:"Which exigence most directly gives rise to the speaker's concern?",opts:["the district's plan to rely entirely on a digital emergency-map system despite a recent network failure","the district's broader effort to modernize emergency procedures across all campuses","community concern that students use their phones during severe-weather drills","recent debate over whether paper maps are expensive to print and update"],correct:0,why:"The specific proposed change plus the recent failure creates the immediate need for the argument."},
+{skill:"Tone",text:"“I understand why the promise is appealing. I also think we should be careful about what we give up in exchange for convenience.”",stem:"Which tone word most precisely characterizes the speaker?",opts:["cautious","indignant","apathetic","inspirational"],correct:0,why:"The speaker acknowledges appeal while deliberately warning against moving too quickly."},
+{skill:"Diction",text:"“The company calls the leak an ‘incident.’ Residents living beside the river call it a black, oily stain that clings to reeds and leaves a metallic taste in the air.”",stem:"Which choice best explains the rhetorical effect of the diction?",opts:["sensory diction that makes the damage tangible in order to challenge the company's minimizing language","technical diction that establishes scientific precision in order to prove the contamination is legally actionable","pejorative diction that ridicules company officials in order to undermine their personal credibility","inclusive diction that unites residents and officials in order to encourage a collaborative response"],correct:0,why:"Concrete sensory details make the harm physically imaginable and counter the euphemistic word 'incident.'"},
+{skill:"Tone Shift",text:"“For years I remembered the old station with affection—the brass clock, the echoing hall, the smell of coffee before dawn. But nostalgia is not a maintenance plan. If we want the building to survive, sentiment must become stewardship.”",stem:"Which description best captures the tone shift and its function?",opts:["nostalgic to resolute, moving from memory toward responsibility","wistful to resigned, accepting that preservation is ultimately impossible","reflective to apprehensive, emphasizing uncertainty about future costs","reverent to conciliatory, reducing disagreement over competing renovation plans"],correct:0,why:"The passage begins in affectionate memory and pivots toward determined action."}
+];
+
+const passages=[
+{
+ title:"Passage 1 — The Cost of Looking Finished",
+ headnote:"The following passage is adapted from a speech by a neighborhood association president at a city budget hearing.",
+ text:[
+ "Three years ago, the city announced that our east-side corridor would become a model of renewal. New banners appeared first. Then came decorative lighting, painted benches, and a glossy website filled with photographs of smiling families walking beneath trees that had not yet been planted.",
+ "Some improvements were real. The sidewalks are brighter. Two abandoned storefronts have reopened. It would be unfair to pretend nothing changed simply because everything did not.",
+ "But appearance is an easy form of progress to fund. The storm drains beneath those new sidewalks still overflow during heavy rain. The community clinic closes two evenings a week because it cannot keep enough nurses. Students wait for buses beneath beautiful new signs while the buses themselves arrive less often than they did five years ago.",
+ "We are not asking the city to stop caring how our neighborhood looks. We are asking it to care just as much about how the neighborhood works.",
+ "A polished bench is welcome. A functioning drainage system is necessary. A banner can announce pride; reliable public services allow people to live with it.",
+ "Tonight, as you decide where next year's money will go, I ask you to measure renewal by what residents can depend on after the photographers leave."
+ ],
+ mentor:"In the budget-hearing speech “The Cost of Looking Finished,” the neighborhood association president addresses city officials deciding how to allocate public funds amid concern that visible beautification has outpaced reliable neighborhood services. By contrasting cosmetic improvements with unmet infrastructure and service needs, the speaker emphasizes that meaningful renewal should be measured by what residents can consistently depend on.",
+ qs:[
+ {skill:"Intended Audience",stem:"The speaker most directly addresses an audience of",opts:[
+ "city officials deciding how to allocate limited public funds among competing neighborhood needs",
+ "residents evaluating whether recent beautification projects have improved daily life in the corridor",
+ "urban planners comparing the visual impact of several approaches to neighborhood redevelopment",
+ "taxpayers concerned that public spending on infrastructure has increased faster than service quality"
+ ],correct:0,why:"The closing reference to 'you decide where next year's money will go' most directly targets officials with budget authority."},
+ {skill:"Exigence",stem:"Which circumstance most directly creates the exigence for the speech?",opts:[
+ "an upcoming budget decision after visible redevelopment has not resolved several essential service problems",
+ "growing public disagreement over whether beautification should be included in neighborhood redevelopment plans",
+ "recent evidence that reopened storefronts have not generated enough economic activity to justify city investment",
+ "a broader citywide debate about whether infrastructure or public services should receive priority during redevelopment"
+ ],correct:0,why:"The immediate need arises from the pending budget decision in the context of unresolved service failures."},
+ {skill:"Author's Purpose",stem:"The speaker's primary purpose is to",opts:[
+ "emphasize that meaningful renewal should be judged by dependable services rather than visible improvements alone",
+ "criticize city leaders for using beautification projects to distract residents from long-standing public failures",
+ "question whether neighborhood redevelopment can succeed when infrastructure and service needs compete for funding",
+ "motivate residents to oppose future beautification projects until the city repairs all essential infrastructure"
+ ],correct:0,why:"The speaker concedes that some visible improvements matter but reframes the standard by which renewal should be judged."},
+ {skill:"Tone / Tone Shift",stem:"The speaker's tone is best described as shifting from",opts:[
+ "measured to resolute, as initial concessions give way to a firm demand for a different standard of progress",
+ "conciliatory to indignant, as acknowledgment of improvements develops into anger at deliberate neglect by officials",
+ "reflective to apprehensive, as consideration of past changes develops into concern that future reforms may fail",
+ "skeptical to inspirational, as doubt about redevelopment gives way to confidence in the community's ability to change"
+ ],correct:0,why:"The opening fairly acknowledges real improvements; the ending becomes firm and directive without becoming outraged."},
+ {skill:"Diction",stem:"The contrast between “polished,” “beautiful,” and “glossy” details and words such as “overflow,” “closes,” and “wait” is best understood as",opts:[
+ "loaded diction that contrasts attractive appearances with persistent failures in order to support the speaker's call for a more substantive definition of renewal",
+ "pejorative diction that diminishes beautification projects in order to portray city officials as more interested in publicity than residents",
+ "sensory diction that makes the neighborhood physically vivid in order to inspire residents to take greater pride in the corridor",
+ "formal diction that maintains a professional register in order to reassure officials that the speaker's criticism is objective rather than emotional"
+ ],correct:0,why:"The contrast deliberately loads 'appearance' and 'function' with different values to support the passage's central redefinition of progress."}
+ ]
+},
+{
+ title:"Passage 2 — What Counts as Prepared",
+ headnote:"The following passage is adapted from remarks by a hospital training director to newly licensed nurses.",
+ text:[
+ "Today you receive a credential that confirms years of study, clinical practice, and difficult examinations. You should be proud of it. You have earned the right to enter rooms where people will look to you for competence on some of the most frightening days of their lives.",
+ "That responsibility creates a temptation I want you to recognize early: the temptation to confuse confidence with certainty.",
+ "Experienced nurses do not know everything. What they know is when uncertainty matters. They notice when a patient's breathing does not match the monitor. They ask a colleague to look again. They say, 'I have not seen this before,' before unfamiliarity has time to become error.",
+ "In training, asking a question can feel like admitting that you missed something you were supposed to know. In practice, refusing to ask can mean that everyone else misses it too.",
+ "So carry your knowledge proudly. Speak with confidence when confidence is warranted. But do not perform certainty simply because someone expects it from you.",
+ "Professional judgment is not the absence of questions. It is knowing which questions cannot safely remain unasked."
+ ],
+ mentor:"In the ceremonial address “What Counts as Prepared,” the hospital training director addresses newly licensed nurses entering professional practice amid the pressure to appear fully certain after earning their credentials. By redefining responsible confidence as the willingness to recognize and voice uncertainty, the speaker encourages new nurses to treat questioning as a sign of professional judgment rather than inadequacy.",
+ qs:[
+ {skill:"Intended Audience",stem:"The speaker most directly addresses",opts:[
+ "newly licensed nurses preparing to move from supervised training into independent professional practice",
+ "experienced nurses responsible for mentoring less confident colleagues during difficult clinical situations",
+ "patients who may misinterpret a nurse's request for assistance as evidence of inadequate preparation",
+ "hospital administrators establishing standards for when staff members should seek additional clinical consultation"
+ ],correct:0,why:"The opening references receiving a credential and entering professional practice, directly identifying newly licensed nurses."},
+ {skill:"Exigence",stem:"Which concern most directly creates the exigence for the speaker's message?",opts:[
+ "new nurses may feel pressure to appear certain even when responsible practice requires them to acknowledge uncertainty",
+ "patients increasingly expect nurses to provide immediate answers without consulting other medical professionals",
+ "clinical training programs may emphasize technical knowledge more heavily than communication with experienced staff",
+ "hospitals may discourage inexperienced nurses from requesting assistance during periods of high patient demand"
+ ],correct:0,why:"The speaker explicitly identifies the temptation to confuse confidence with certainty as the immediate problem."},
+ {skill:"Author's Purpose",stem:"The speaker's primary purpose is to",opts:[
+ "encourage new nurses to regard thoughtful questioning as evidence of professional judgment rather than inadequate preparation",
+ "emphasize that confidence should be limited until new nurses accumulate enough experience to work independently",
+ "question whether professional credentials can accurately indicate readiness for unpredictable clinical responsibilities",
+ "criticize training cultures that cause inexperienced nurses to conceal uncertainty in order to appear competent"
+ ],correct:0,why:"The speaker's central aim is constructive: redefine questioning as responsible judgment."},
+ {skill:"Tone / Tone Shift",stem:"The speaker's tone is best characterized as shifting from",opts:[
+ "proud to cautionary, as celebration of achievement gives way to a warning about the misuse of confidence",
+ "inspirational to skeptical, as praise for graduates develops into doubt about whether their credentials prove readiness",
+ "solemn to conciliatory, as awareness of clinical risk develops into reassurance that mistakes are unavoidable",
+ "measured to indignant, as respect for new nurses develops into criticism of institutions that discourage questions"
+ ],correct:0,why:"The passage begins by affirming achievement and then pivots into a serious warning about certainty."},
+ {skill:"Diction",stem:"The repeated use of “we,” “you,” “carry,” and “ask” is best understood as",opts:[
+ "inclusive and direct diction that positions questioning as a shared professional practice in order to encourage responsible action",
+ "formal diction that creates institutional authority in order to remind nurses that professional rules govern uncertainty",
+ "technical diction that grounds the message in clinical expertise in order to establish the speaker's medical credibility",
+ "laudatory diction that praises the graduates' accomplishments in order to reassure them that further learning is unnecessary"
+ ],correct:0,why:"The direct, inclusive language makes the norm feel collective and actionable rather than distant or punitive."}
+ ]
+}
+];
+
+const finalPassage={
+ title:"Final Passage — The Quiet Measure",
+ text:[
+ "Every spring, our university publishes photographs of students planting trees along the edges of campus. The pictures are easy to celebrate: bright shirts, fresh soil, a row of saplings standing upright beneath banners about sustainability.",
+ "I have smiled in some of those photographs.",
+ "But planting day is one afternoon. A tree's survival is measured in summers.",
+ "Over the past four years, student volunteers have counted the trees planted during previous campaigns. Nearly a third are gone. Some died during drought. Others were damaged when protective stakes were removed too early. Several disappeared when construction crews widened a service road.",
+ "This does not make the planting campaigns failures. It makes them beginnings.",
+ "If we want our sustainability pledge to mean more than the photograph taken beside it, we should fund the quiet work that follows: watering schedules, replacement plans, soil care, and long-term monitoring.",
+ "A university teaches by what it celebrates. It also teaches by what it continues to care for after the celebration ends."
+ ],
+ mentor:"In the campus address “The Quiet Measure,” the student sustainability coordinator addresses university leaders and community members involved in environmental initiatives amid evidence that many trees from highly publicized planting campaigns have not survived. By distinguishing visible beginnings from sustained care, the speaker emphasizes that genuine environmental commitment requires long-term maintenance rather than symbolic participation alone."
+};
+
+const shuffle=a=>{const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b};
+
+const STAGE_ART = {
+  home: "assets/home_arena.png",
+  stage1: "assets/armory.png",
+  stage2: "assets/trials.png",
+  stage3: "assets/ap_arena.png",
+  write: "assets/final_chamber.png"
+};
+function artCard(src,title,caption){
+  return `<img src="${src}" alt="${title}"><div class="scene-label"><b>${title}</b><p>${caption}</p></div>`;
+}
+function stageArtFor(stage){
+  if(stage===1) return [STAGE_ART.stage1,'THE ARMORY','Purpose words. Tone words. Diction terms.'];
+  if(stage===2) return [STAGE_ART.stage2,'THE TRIALS','Move from terms to live language.'];
+  if(stage===3) return [STAGE_ART.stage3,'THE AP ARENA','Read like an AP Lang student.'];
+  return [STAGE_ART.write,'THE FINAL CHAMBER','Write with precision under pressure.'];
+}
+
+const state={
+ name:"",period:"",view:"home",stage:1,index:0,first:[],paced:{s1:0,s2:0,ap:0,timeouts:0},writing:"",checks:{},apPass:0,apQ:0,
+ retries:{},runSegment:0,runStats:{tokens:0,deaths:0}
+};
+function save(){localStorage.setItem(STORAGE,JSON.stringify(state))}
+function load(){try{const s=JSON.parse(localStorage.getItem(STORAGE));if(s)Object.assign(state,s)}catch(e){}}
+function reset(){localStorage.removeItem(STORAGE);location.reload()}
+const $=id=>document.getElementById(id);
+const screens=["home","briefScreen","questionScreen","runnerScreen","readScreen","apScreen","writeScreen","mentorScreen","reportScreen"];
+let timerInt=null, seconds=0, selected=null, order=[], runnerRAF=null, runnerListeners=null;
+
+function show(id){screens.forEach(s=>$(s).classList.toggle("active",s===id));state.view=id;save();window.scrollTo({top:0,behavior:"smooth"})}
+function hudText(){return `<b>${state.name||"Competitor"}</b> • ${state.period||""} • First response = accuracy`}
+function setScene(stage){const qs=$("questionScene"),bs=$("briefScene");[qs,bs].forEach(el=>{el.className="scene "+(stage===1?"armory":stage===2?"trials":"arena");el.innerHTML=stage===1?'<div class="orb"></div><div class="scanlines"></div>':stage===2?'<div class="bridges"></div><div class="rain"></div><div class="scanlines"></div>':'<div class="stands"></div><div class="rain"></div><div class="scanlines"></div>'})}
+function brief(stage){
+ setScene(stage);$("briefHud").innerHTML=hudText();
+ const cfg=stage===1?{
+  eye:"Chamber 1 • THE ARMORY",title:"The Armory",
+  text:"The first gate slides open and the floor begins to glow. Recover a much larger set of key terms before the chamber seals: 30 rapid-fire questions covering 10 purpose words, 10 tone words, and all 10 diction categories. Each question gives you 15 seconds, so precision is what keeps you moving.",
+  cards:[["TIME","15 seconds per question"],["QUESTIONS","30 rapid-fire items"],["CONTENT","10 Purpose • 10 Tone • 10 Diction"]],btn:"OPEN THE FIRST GATE"
+ }:stage===2?{
+  eye:"Chamber 2 • THE TRIALS",title:"The Trials",
+  text:"You leave the armory and cross into a corridor of traps. The clues are now buried inside real language. Read fast, trust your instincts, and choose the most precise interpretation before time runs out.",
+  cards:[["TIME","25 seconds per question"],["CONTENT","Micro-text application"],["RIGOR","Close choices • precise reasoning"]],btn:"CROSS INTO THE TRIALS"
+ }:{
+  eye:"Chamber 3 • THE ARENA",title:"The Arena",
+  text:"The arena doors rise and two full passages wait inside. You get 2 minutes to read each passage, then it stays on screen while you battle through five close, AP-style questions under one-minute pressure.",
+  cards:[["READ","2 minutes per passage"],["QUESTIONS","5 per passage"],["TIME","60 seconds per question"]],btn:"ENTER THE ARENA"
+ };
+ $("briefEyebrow").textContent=cfg.eye;$("briefTitle").textContent=cfg.title;$("briefText").textContent=cfg.text;$("briefCards").innerHTML=cfg.cards.map(x=>`<div><strong>${x[0]}</strong><span>${x[1]}</span></div>`).join("");$("briefGo").textContent=cfg.btn+" →";state.stage=stage; const a=stageArtFor(stage); if($("briefArt")) $("briefArt").innerHTML=artCard(a[0],a[1],a[2]); show("briefScreen")
+}
+$("startBtn").onclick=()=>{const n=$("studentName").value.trim(),p=$("period").value;if(!n||!p){$("homeError").textContent="Enter your first and last name and choose a class period.";return}state.name=n;state.period=p;save();brief(1)}
+$("briefGo").onclick=()=>{if(state.stage===3){startReading(0)}else{state.index=0;renderQuestion()}}
+function currentBank(){return state.stage===1?stage1:stage2}
+function displayOrder(item,key){if(!state.retries["order"+key])state.retries["order"+key]=shuffle([0,1,2,3]);return state.retries["order"+key]}
+function renderQuestion(){
+ clearTimer();setScene(state.stage);$("questionHud").innerHTML=hudText();show("questionScreen");
+ const bank=currentBank(),item=bank[state.index],limit=state.stage===1?15:25,key="s"+state.stage+"-"+state.index;order=displayOrder(item,key);selected=null;
+ $("qStage").textContent=`Stage ${state.stage} • ${state.stage===1?"THE ARMORY — KNOW IT":"THE TRIALS — APPLY IT"}`;$("qCount").textContent=`Question ${state.index+1} of ${bank.length}`;$("question").textContent=item.stem;
+ $("microtext").style.display=item.text?"block":"none";$("microtext").textContent=item.text||"";
+ $("options").innerHTML="";order.forEach((oi,pos)=>{const b=document.createElement("button");b.className="option";b.dataset.orig=oi;b.innerHTML=`<span class="letter">${"ABCD"[pos]}</span><span>${item.opts[oi]}</span>`;b.onclick=()=>{[...$("options").children].forEach(x=>x.classList.remove("selected"));b.classList.add("selected");selected=oi;$("submitBtn").disabled=false};$("options").appendChild(b)});
+ $("feedback").className="feedback";$("feedback").textContent="";$("submitBtn").disabled=true;$("submitBtn").style.display="inline-block";$("retryBtn").style.display="none";$("nextBtn").style.display="none";$("qProgress").style.width=`${state.index/bank.length*100}%`; const qa=stageArtFor(state.stage); if($("cineStageArt")) $("cineStageArt").innerHTML=artCard(qa[0],qa[1],qa[2]);
+ $("cineTitle").innerHTML=state.stage===1?`<strong>THE ARMORY</strong><span>Precision is your first weapon.</span>`:`<strong>THE TRIALS</strong><span>Language only matters when you can explain what it does.</span>`;
+ startTimer(limit,$("timer"),()=>timeoutQuestion(item,key));
+}
+function startTimer(limit,node,onEnd){clearTimer();seconds=limit;updateTimer(node);timerInt=setInterval(()=>{seconds--;updateTimer(node);if(seconds<=0){clearTimer();onEnd()}},1000)}
+function updateTimer(node){node.textContent=`0:${String(Math.max(0,seconds)).padStart(2,"0")}`;node.classList.toggle("warn",seconds<=5&&seconds>3);node.classList.toggle("danger",seconds<=3)}
+function clearTimer(){if(timerInt){clearInterval(timerInt);timerInt=null}}
+function recordFirst(key,correct,timed){if(state.first.some(x=>x.key===key))return;state.first.push({key,correct,stage:state.stage,skill:(state.stage===3?"AP":currentBank()[state.index]?.skill)||"AP",timed});if(timed)state.paced.timeouts++;else if(state.stage===1)state.paced.s1++;else if(state.stage===2)state.paced.s2++;else state.paced.ap++;save()}
+function timeoutQuestion(item,key){recordFirst(key,false,true);$("feedback").className="feedback wrong show";$("feedback").textContent="TIME EXPIRED. Your first response is recorded. Now finish the question for learning—your accuracy score will not change.";$("submitBtn").textContent="CHECK ANSWER";$("submitBtn").disabled=selected===null}
+function submitCurrent(){
+ const bank=currentBank(),item=bank[state.index],key="s"+state.stage+"-"+state.index;if(selected===null)return;clearTimer();const correct=selected===item.correct;recordFirst(key,correct,false);
+ if(correct){$("feedback").className="feedback correct show";$("feedback").textContent="Correct. "+item.why;$("submitBtn").style.display="none";$("retryBtn").style.display="none";$("nextBtn").style.display="inline-block"}
+ else{$("feedback").className="feedback wrong show";$("feedback").textContent="Not quite. "+item.why;$("submitBtn").style.display="none";$("retryBtn").style.display="inline-block";$("nextBtn").style.display="none"}
+}
+$("submitBtn").onclick=submitCurrent;
+$("retryBtn").onclick=()=>{const item=currentBank()[state.index];selected=null;$("feedback").className="feedback";$("feedback").textContent="";$("retryBtn").style.display="none";$("submitBtn").style.display="inline-block";$("submitBtn").disabled=true;[...$("options").children].forEach((b)=>{b.classList.remove("selected");const oi=Number(b.dataset.orig);b.onclick=()=>{[...$("options").children].forEach(x=>x.classList.remove("selected"));b.classList.add("selected");selected=oi;$("submitBtn").disabled=false}})}
+$("nextBtn").onclick=()=>{state.index++;const bank=currentBank();if(state.index>=bank.length){state.runSegment=state.stage;showRunner()}else renderQuestion()}
+
+const RUNNER_CONFIG={
+  1:{tag:"CHAMBER 1 ESCAPE",title:"Pendulum Run",story:"The armory locks behind you. Ahead, a narrow passage is waking up—counterweights drop, bronze sweep-bars begin to swing, and the next gate is already closing.",goal:"Survive 45 seconds and capture 3 BRONZE SEALS. Jump the floor blocks. Slide under the swinging bars. The final seal appears near the end of the run.",token:"Bronze Seals",found:"BRONZE SEAL!",difficulty:"PACE: FAST",bg:STAGE_ART.stage1,spawnGap:1.70,speed:320},
+  2:{tag:"CHAMBER 2 ESCAPE",title:"Chasm Crossing",story:"The trials chamber fractures open beneath your feet. The only route forward is a collapsing causeway suspended over the dark. Stone sections break loose as overhead braces sweep across the path.",goal:"Survive 45 seconds and capture 3 CRYSTAL KEYS. Jump broken sections. Slide under the low braces. The third key appears just before the far gate.",token:"Crystal Keys",found:"CRYSTAL KEY!",difficulty:"PACE: FASTER",bg:STAGE_ART.stage2,spawnGap:1.20,speed:400},
+  3:{tag:"FINAL ARENA ESCAPE",title:"The Last Gate",story:"The AP arena erupts behind you. Columns crash onto the track, iron crossbars drop from above, and the final chamber is sealing itself one door at a time.",goal:"Survive 45 seconds and capture 3 GOLD EMBLEMS. Clear the barricades, duck under the falling bars, and take the final emblem at the last gate.",token:"Gold Emblems",found:"GOLD EMBLEM!",difficulty:"PACE: EXTREME",bg:STAGE_ART.stage3,spawnGap:0.82,speed:485}
+};
+function currentRunnerCfg(){return RUNNER_CONFIG[state.runSegment]||RUNNER_CONFIG[1]}
+function showRunner(){
+ $("runnerHud").innerHTML=hudText();$("runNow").disabled=false;
+ const cfg=currentRunnerCfg(),stage=$("runnerStage");
+ $("runnerSceneTag").textContent=cfg.tag;$("runnerTitle").textContent=cfg.title;$("runnerStory").textContent=cfg.story;$("runnerGoal").textContent=cfg.goal;if($("runnerDifficulty"))$("runnerDifficulty").textContent=cfg.difficulty||"";
+ $("runTime").textContent="45s";$("runLives").textContent="Lives ♥♥♥";$("runTokens").textContent=cfg.token+" 0/3";
+ stage.className="runner-stage segment-"+state.runSegment;stage.style.setProperty("--runner-bg",`url("${cfg.bg}")`);
+ show("runnerScreen")
+}
+$("runNow").onclick=startRunner;$("skipRun").onclick=finishRunner;
+function startRunner(){
+ $("runNow").disabled=true;const cfg=currentRunnerCfg(),stage=$("runnerStage"),player=$("player"),msg=$("runmsg");stage.querySelectorAll(".obstacle,.collect").forEach(x=>x.remove());
+ let t=45,lives=3,tokens=0,x=120,jumping=false,sliding=false,done=false,lastSpawn=-1.2,spawnIndex=0,nextToken=0;
+ const tokenTimes=[12,28,42];
+ const spawn=()=>{const kind=(spawnIndex%3===2||spawnIndex%5===4)?"slide":"jump";const o=document.createElement("div");o.className="obstacle "+kind+"-obstacle";o.dataset.kind=kind;o.style.left="105%";stage.appendChild(o);o.dataset.x=stage.clientWidth+80;spawnIndex++};
+ const spawnToken=()=>{const c=document.createElement("div");c.className="collect";c.dataset.x=stage.clientWidth+50;c.style.left=c.dataset.x+"px";c.style.bottom=(nextToken===1?"255px":"220px");stage.appendChild(c);nextToken++};
+ let keys={};const kd=e=>{if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].includes(e.code)){e.preventDefault();keys[e.code]=true;if((e.code==="Space"||e.code==="ArrowUp")&&!jumping&&!sliding){jumping=true;player.classList.add("jump");setTimeout(()=>{jumping=false;player.classList.remove("jump")},610)}if(e.code==="ArrowDown"&&!jumping){sliding=true;player.classList.add("slide")}}};const ku=e=>{keys[e.code]=false;if(e.code==="ArrowDown"){sliding=false;player.classList.remove("slide")}};window.addEventListener("keydown",kd);window.addEventListener("keyup",ku);runnerListeners=()=>{window.removeEventListener("keydown",kd);window.removeEventListener("keyup",ku)};
+ const start=performance.now();let last=start;
+ function flash(txt){msg.textContent=txt;msg.classList.add("show");setTimeout(()=>msg.classList.remove("show"),720)}
+ function frame(now){if(done)return;const dt=(now-last)/1000;last=now;const elapsed=(now-start)/1000;t=Math.max(0,45-elapsed);$("runTime").textContent=Math.ceil(t)+"s";$("runLives").textContent="Lives "+("♥".repeat(lives)||"—");$("runTokens").textContent=cfg.token+` ${tokens}/3`;
+  if(keys.ArrowLeft)x=Math.max(65,x-195*dt);if(keys.ArrowRight)x=Math.min(Math.max(290,stage.clientWidth*.34),x+195*dt);player.style.left=x+"px";
+  const liveGap=Math.max(cfg.spawnGap*0.82,cfg.spawnGap-(elapsed/45)*0.18);if(elapsed-lastSpawn>liveGap){spawn();lastSpawn=elapsed}
+  if(nextToken<3 && elapsed>=tokenTimes[nextToken])spawnToken();
+  stage.querySelectorAll(".obstacle").forEach(o=>{const liveSpeed=cfg.speed*(1+Math.min(elapsed/45,1)*0.12);let ox=Number(o.dataset.x)-liveSpeed*dt;o.dataset.x=ox;o.style.left=ox+"px";if(ox<-120){o.remove();return}if(Math.abs(ox-x)<50){const hit=(o.dataset.kind==="jump"&&!jumping)||(o.dataset.kind==="slide"&&!sliding);if(hit){lives--;state.runStats.deaths++;o.remove();flash("HIT — KEEP MOVING!");if(lives<=0){done=true;cleanup();flash("RUN ENDED");setTimeout(finishRunner,900)}}}});
+  stage.querySelectorAll(".collect").forEach(c=>{let ox=Number(c.dataset.x)-225*dt;c.dataset.x=ox;c.style.left=ox+"px";if(ox<-80)c.remove();else if(Math.abs(ox-x)<64){tokens++;state.runStats.tokens++;c.remove();flash(cfg.found)}});
+  if(t<=0&&!done){done=true;cleanup();flash(tokens===3?"GATE CLEARED — ALL 3 CAPTURED!":"GATE CLEARED!");setTimeout(finishRunner,1050);return}
+  runnerRAF=requestAnimationFrame(frame)
+ }
+ function cleanup(){if(runnerRAF)cancelAnimationFrame(runnerRAF);if(runnerListeners)runnerListeners();runnerRAF=null;runnerListeners=null;player.classList.remove("jump","slide");save()}
+ runnerRAF=requestAnimationFrame(frame)
+}
+function finishRunner(){if(runnerRAF)cancelAnimationFrame(runnerRAF);if(runnerListeners)runnerListeners();runnerRAF=null;runnerListeners=null;if(state.runSegment===1)brief(2);else if(state.runSegment===2)brief(3);else startWriting()}
+
+function startReading(pi){state.apPass=pi;clearTimer();show("readScreen");$("readHud").innerHTML=hudText();const p=passages[pi];$("readPassLabel").textContent=`Passage ${pi+1} of ${passages.length}`;$("readTitle").textContent=p.title;$("readPassage").innerHTML=`<p><em>${p.headnote}</em></p>`+p.text.map(x=>`<p>${x}</p>`).join(""); if($("readArt")) $("readArt").innerHTML=artCard(STAGE_ART.stage3,"THE AP ARENA","Two minutes to read. Then the questions begin.");startTimer(120,$("readTimer"),()=>beginAPQuestions());$("skipRead").onclick=beginAPQuestions}
+function beginAPQuestions(){clearTimer();state.apQ=0;renderAPQuestion()}
+function renderAPQuestion(){
+ clearTimer();show("apScreen");$("apHud").innerHTML=hudText();const p=passages[state.apPass],q=p.qs[state.apQ],key=`ap${state.apPass}-${state.apQ}`;$("apPassLabel").textContent=`Passage ${state.apPass+1} of ${passages.length}`;$("apTitle").textContent=p.title;$("apPassage").innerHTML=`<p><em>${p.headnote}</em></p>`+p.text.map(x=>`<p>${x}</p>`).join("");$("apSkill").textContent=q.skill;$("apCount").textContent=`Question ${state.apQ+1} of 5`;$("apQuestion").textContent=q.stem; if($("apArt")) $("apArt").innerHTML=artCard(STAGE_ART.stage3,"THE AP ARENA","Passage visible. One minute per question."); selected=null;order=displayOrder(q,key);$("apOptions").innerHTML="";order.forEach((oi,pos)=>{const b=document.createElement("button");b.className="option";b.dataset.orig=oi;b.innerHTML=`<span class="letter">${"ABCD"[pos]}</span><span>${q.opts[oi]}</span>`;b.onclick=()=>{[...$("apOptions").children].forEach(x=>x.classList.remove("selected"));b.classList.add("selected");selected=oi;$("apSubmit").disabled=false};$("apOptions").appendChild(b)});$("apFeedback").className="feedback";$("apFeedback").textContent="";$("apSubmit").disabled=true;$("apSubmit").style.display="inline-block";$("apRetry").style.display="none";$("apNext").style.display="none";$("apProgress").style.width=`${(state.apPass*5+state.apQ)/10*100}%`;startTimer(60,$("apTimer"),()=>timeoutAP(q,key))}
+function timeoutAP(q,key){recordFirst(key,false,true);$("apFeedback").className="feedback wrong show";$("apFeedback").textContent="TIME EXPIRED. Your first response is recorded. Finish the question for learning; your first-attempt score is already locked.";$("apSubmit").disabled=selected===null}
+$("apSubmit").onclick=()=>{const p=passages[state.apPass],q=p.qs[state.apQ],key=`ap${state.apPass}-${state.apQ}`;if(selected===null)return;clearTimer();const correct=selected===q.correct;recordFirst(key,correct,false);if(correct){$("apFeedback").className="feedback correct show";$("apFeedback").textContent="Correct. "+q.why;$("apSubmit").style.display="none";$("apNext").style.display="inline-block"}else{$("apFeedback").className="feedback wrong show";$("apFeedback").textContent="Not quite. "+q.why;$("apSubmit").style.display="none";$("apRetry").style.display="inline-block"}}
+$("apRetry").onclick=()=>{selected=null;$("apFeedback").className="feedback";$("apRetry").style.display="none";$("apSubmit").style.display="inline-block";$("apSubmit").disabled=true;[...$("apOptions").children].forEach(b=>{b.classList.remove("selected");const oi=Number(b.dataset.orig);b.onclick=()=>{[...$("apOptions").children].forEach(x=>x.classList.remove("selected"));b.classList.add("selected");selected=oi;$("apSubmit").disabled=false}})}
+$("apNext").onclick=()=>{state.apQ++;if(state.apQ>=5){if(state.apPass===0){startReading(1)}else{state.runSegment=3;showRunner()}}else renderAPQuestion()}
+
+let writeInt=null,writeSec=360;
+function startWriting(){show("writeScreen");$("writeHud").innerHTML=hudText();$("writeTitle").textContent=finalPassage.title;$("writePassage").innerHTML=finalPassage.text.map(x=>`<p>${x}</p>`).join(""); if($("writeArt")) $("writeArt").innerHTML=artCard(STAGE_ART.write,"THE FINAL CHAMBER","Keep the passage in view and write your introduction.");$("introText").value=state.writing||"";writeSec=360;updateWrite();clearInterval(writeInt);writeInt=setInterval(()=>{writeSec--;updateWrite();if(writeSec<=0){clearInterval(writeInt);$("writeMsg").textContent="TIME TARGET REACHED — finish your thought and submit when ready."}},1000)}
+function updateWrite(){$("writeTimer").textContent=`${Math.floor(Math.max(0,writeSec)/60)}:${String(Math.max(0,writeSec)%60).padStart(2,"0")}`;$("writeTimer").style.color=writeSec<=30?"var(--red)":writeSec<=60?"var(--gold)":"var(--green)"}
+$("submitIntro").onclick=()=>{const t=$("introText").value.trim();if(!t){$("writeMsg").textContent="Write your introduction before submitting.";return}state.writing=t;state.checks={audience:$("checkAudience").checked,exigence:$("checkExigence").checked,purpose:$("checkPurpose").checked};save();clearInterval(writeInt);$("mentorHud").innerHTML=hudText();$("mentorIntro").textContent=finalPassage.mentor;show("mentorScreen")}
+$("toReport").onclick=showReport;
+function showReport(){
+ show("reportScreen");const total=state.first.length,correct=state.first.filter(x=>x.correct).length,pct=total?Math.round(correct/total*100):0;$("reportName").textContent=`Competitor: ${state.name} • ${state.period}`;$("reportScore").textContent=pct+"%";
+ const cats=["Purpose","Tone","Tone Shift","Diction","Audience","Exigence","Author's Purpose","Intended Audience","Tone / Tone Shift"];const map=[
+  ["Author's Purpose",["Purpose","Author's Purpose"]],
+  ["Tone & Tone Shifts",["Tone","Tone Shift","Tone / Tone Shift"]],
+  ["Diction",["Diction"]],
+  ["Rhetorical Situation",["Audience","Exigence","Intended Audience"]],
+  ["AP Passage Analysis",["AP"]]
+ ];
+ $("metrics").innerHTML=map.map(([label,skills])=>{let items=state.first.filter(x=>skills.includes(x.skill)||(label==="AP Passage Analysis"&&x.stage===3));if(label==="AP Passage Analysis")items=state.first.filter(x=>x.key.startsWith("ap"));const g=items.filter(x=>x.correct).length;return `<div class="metric"><span>${label}</span><strong>${g}/${items.length}</strong></div>`}).join("");
+ $("paceGrid").innerHTML=`<div><b>Stage 1 — The Armory</b><br>${state.paced.s1}/30 answered before time</div><div><b>Stage 2 — The Trials</b><br>${state.paced.s2}/8 answered before time</div><div><b>AP Arena</b><br>${state.paced.ap}/10 answered before time<br>Timed out: ${state.paced.timeouts}</div>`;
+ $("reportWriting").textContent=state.writing||"(No introduction submitted)";
+}
+$("printBtn").onclick=()=>window.print();
+$("downloadBtn").onclick=()=>{const total=state.first.length,correct=state.first.filter(x=>x.correct).length,pct=total?Math.round(correct/total*100):0;const txt=`THE RHETORICAL GAUNTLET — FINAL PERFORMANCE REPORT\nStudent: ${state.name}\nClass: ${state.period}\nFirst-Attempt Accuracy: ${correct}/${total} (${pct}%)\n\nPACE\nStage 1: ${state.paced.s1}/30 answered before time\nStage 2: ${state.paced.s2}/8 answered before time\nAP Arena: ${state.paced.ap}/10 answered before time\nTimed Out: ${state.paced.timeouts}\n\nFINAL INTRODUCTION\n${state.writing}\n`;const b=new Blob([txt],{type:"text/plain"}),u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download=`Rhetorical_Gauntlet_${state.name.replace(/\s+/g,"_")}.txt`;a.click();URL.revokeObjectURL(u)}
+$("restartBtn").onclick=reset;
+
+load();
+if(state.name){$("studentName").value=state.name;$("period").value=state.period}
+
+// cinematic particles
+(function(){
+  document.querySelectorAll('.particles').forEach((wrap)=>{
+    if(wrap.children.length) return;
+    for(let i=0;i<26;i++){
+      const p=document.createElement('span');
+      const teal=Math.random()>.55, purp=Math.random()>.78;
+      p.className='particle'+(teal?' teal':'')+(purp?' purple':'');
+      const s=4+Math.random()*8;
+      p.style.width=s+'px'; p.style.height=s+'px'; p.style.left=(Math.random()*100)+'%'; p.style.bottom=(-10-Math.random()*80)+'px';
+      p.style.animationDuration=(10+Math.random()*18)+'s'; p.style.animationDelay=(-Math.random()*18)+'s';
+      wrap.appendChild(p);
+    }
+  });
+})();
+function updateGlobalProgress(){
+  const total=48; // 30 + 8 + 10 AP
+  const done=(state.first||[]).length;
+  const pct=Math.min(100, Math.round(done/total*100));
+  const bar=document.getElementById('globalProgress'); if(bar) bar.style.width=pct+'%';
+}
+const _oldSave = save; save = function(){ _oldSave(); updateGlobalProgress(); };
+const _oldShowReport = showReport; showReport = function(){ _oldShowReport(); updateGlobalProgress(); };
+updateGlobalProgress();
+</script>
+</body></html>
